@@ -1,28 +1,40 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { Navbar } from "./Navbar.jsx";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
+export const Home = () => {
+	useEffect(() => {
+        const spyElement = document.querySelector('[data-bs-spy="scroll"]');
+        
+        if (spyElement) {
+            const bootstrap = window.bootstrap;
+            if (bootstrap && bootstrap.Scroll) {
+                new bootstrap.Scroll(spyElement, { target: "#navbar" });
+            }
+        }
+    }, []);
 
-//create your first component
-const Home = () => {
 	return (
-		<div className="text-center">
-            
+		<div className="min-vh-100 bg-light">
+            <Navbar />
 
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
+            {/* scrollable layout container */}
+            <div 
+                data-bs-spy="scroll" 
+                data-bs-target="#navbar" 
+                data-bs-root-margin="0px 0px -40%" 
+                data-bs-smooth-scroll="true" 
+                style={{ 
+                    paddingTop: "70px", 
+                    position: "relative", 
+                    height: "100vh", 
+                    overflowY: "scroll" 
+                }} 
+                tabIndex="0"
+            >
+
+                {/* Sections go here */}
+				
+            </div>
+        </div>
 	);
 };
-
-export default Home;
