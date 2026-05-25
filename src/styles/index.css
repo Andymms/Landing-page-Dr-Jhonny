@@ -1,10 +1,21 @@
+.scroll-container {
+    scroll-behavior: smooth
+}
+
+nav {
+    font-size: 20px;
+}
+
+section {
+    scroll-margin-top: 50px;
+}
 .contacto-button {
     background: linear-gradient(135deg, #0447ac 0%, #12c1e4 100%);
     border: none;
     color: aliceblue;
     
     transition: all 0.2s ease-in-out;
-    font-size: 0.95rem;
+    font-size: 15px;
     letter-spacing: 0.3px;
 }
 
@@ -36,4 +47,9 @@
 
 .SobreMi {
     background-color: rgb(255, 255, 255);
+}
+
+.reserva-burbuja {
+    background: linear-gradient(135deg, #0447ac 0%, #12c1e4 100%);
+    color: aliceblue;
 }

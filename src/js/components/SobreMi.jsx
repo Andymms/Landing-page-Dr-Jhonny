@@ -2,7 +2,7 @@ import React from "react";
 
 export const SobreMi = () => {
     return (
-        <div className="container-flex d-flex justify-content-center my-5 SobreMi">
+        <section id="sobre-mi" className="container-flex d-flex justify-content-center my-5 SobreMi">
             <div className="d-flex container">
                 <img src="https://placehold.co/400x500" alt="DR image" className="m-5" />
                 <div className="container align-self-center">
@@ -14,6 +14,6 @@ export const SobreMi = () => {
                     </p>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };

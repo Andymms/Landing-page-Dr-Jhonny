@@ -11,6 +11,8 @@ export const Navbar = () => {
                             style={{ color: "#0447ac" }}>INICIO</a></li>
                         <li className="nav-item"><a className="nav-link" href="#sobre-mi"
                             style={{ color: "#0447ac" }}>SOBRE MI</a></li>
+                        <li className="nav-item"><a className="nav-link" href="#reserva"
+                            style={{ color: "#0447ac" }}>RESERVA</a></li>
                         <button className="contacto-button btn rounded-pill ms-5">CONTACTO</button>
                     </ul>
                 </div>

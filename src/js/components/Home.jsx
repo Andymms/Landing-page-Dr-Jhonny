@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Navbar } from "./Navbar.jsx";
 import { Jumbotron } from "./Jumbotron.jsx";
 import { SobreMi } from "./SobreMi.jsx";
+import { ReservaConsulta } from "./ReservaConsulta.jsx";
 
 export const Home = () => {
     useEffect(() => {
@@ -19,14 +20,13 @@ export const Home = () => {
         <div className="min-vh-100 bg-light">
             <Navbar />
 
-            {/* scrollable layout container */}
-            <div
+            {/* Scroll Container */}
+            <div className="scroll-container"
                 data-bs-spy="scroll"
                 data-bs-target="#navbar"
                 data-bs-root-margin="0px 0px -40%"
                 data-bs-smooth-scroll="true"
                 style={{
-                    paddingTop: "70px",
                     position: "relative",
                     height: "100vh",
                     overflowY: "scroll",
@@ -38,6 +38,8 @@ export const Home = () => {
                 {/* Sections here */}
                 <Jumbotron />
                 <SobreMi />
+                <ReservaConsulta />
+
             </div>
         </div>
     );
