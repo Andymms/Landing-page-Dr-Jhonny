@@ -3,6 +3,7 @@ import { Navbar } from "./Navbar.jsx";
 import { Jumbotron } from "./Jumbotron.jsx";
 import { SobreMi } from "./SobreMi.jsx";
 import { ReservaConsulta } from "./ReservaConsulta.jsx";
+import { Servicios } from "./Servicios.jsx";
 
 export const Home = () => {
     return (
@@ -11,10 +12,11 @@ export const Home = () => {
 
             <main>
                 <Jumbotron />
+                <Servicios />
                 <SobreMi />
                 <ReservaConsulta />
             </main>
-            
+
         </div>
     );
 };
