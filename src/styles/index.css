@@ -1,14 +1,12 @@
-.scroll-container {
-    scroll-behavior: smooth
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 50px; 
 }
 
 nav {
     font-size: 20px;
 }
 
-section {
-    scroll-margin-top: 50px;
-}
 .contacto-button {
     background: linear-gradient(135deg, #0447ac 0%, #12c1e4 100%);
     border: none;
