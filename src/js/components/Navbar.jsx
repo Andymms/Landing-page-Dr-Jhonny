@@ -15,8 +15,12 @@ export const Navbar = () => {
                             style={{ color: "#0447ac" }}>SOBRE MI</a></li>
                         <li className="nav-item"><a className="nav-link" href="#reserva"
                             style={{ color: "#0447ac" }}>RESERVA</a></li>
-                        
-                        <button className="contacto-button btn rounded-pill ms-5">CONTACTO</button>
+
+                        <button className="contacto-button btn rounded-pill ms-5">
+                            <a href="https://wa.link/k958yl" target="_blank" rel="noopener noreferrer" className="text-white text-decoration-none d-flex align-items-center gap-2 px-3 py-2">
+                                CONTACTO
+                            </a>
+                        </button>
                     </ul>
                 </div>
             </div>

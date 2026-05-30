@@ -60,3 +60,9 @@ nav {
     background: linear-gradient(135deg, #0447ac 0%, #12c1e4 100%);
     color: aliceblue;
 }
+
+.servicios-burbuja:hover {
+    box-shadow: 0 4px 8px rgba(5, 43, 68, 0.616);
+    transition: all 0.2s ease-in-out;
+    transform: translateY(-4px);
+}
