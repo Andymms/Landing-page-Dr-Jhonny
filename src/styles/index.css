@@ -41,6 +41,10 @@ section {
     transform: translateY(1px);
 }
 
+.nav-link {
+    background-color: transparent !important;
+}
+
 .jumbotron {
     background-color: aliceblue;
 }
