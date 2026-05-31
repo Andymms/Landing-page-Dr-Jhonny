@@ -4,6 +4,7 @@ import { Jumbotron } from "./Jumbotron.jsx";
 import { SobreMi } from "./SobreMi.jsx";
 import { ReservaConsulta } from "./ReservaConsulta.jsx";
 import { Servicios } from "./Servicios.jsx";
+import { Testimonios } from "./Testimonios.jsx";
 
 export const Home = () => {
     return (
@@ -15,6 +16,7 @@ export const Home = () => {
                 <Servicios />
                 <SobreMi />
                 <ReservaConsulta />
+                <Testimonios />
             </main>
 
         </div>

@@ -8,21 +8,23 @@ nav {
 }
 
 .contacto-button {
-    background: linear-gradient(135deg, #0447ac 0%, #12c1e4 100%);
-    border: none;
-    color: aliceblue;
+    background-color: #112368;
+    border-radius: 20px;
+    color: white;
     
     transition: all 0.2s ease-in-out;
     font-size: 15px;
-    letter-spacing: 0.3px;
+    letter-spacing: 1px;
 }
 
 .contacto-button:hover {
+    background-color: #112368;
     transform: translateY(-2px);
     color: aliceblue;
 }
 
 .contacto-button:active {
+    background-color: #112268c4;
     transform: translateY(1px);
     color: aliceblue !important;
 }
@@ -44,25 +46,29 @@ nav {
 }
 
 .jumbotron {
-    background-color: aliceblue;
-}
-
-.SobreMi {
-    background-color: rgb(255, 255, 255);
+    background-color: #e4eaff;
 }
 
 .reserva-burbuja {
-    background: linear-gradient(135deg, #0447ac 0%, #12c1e4 100%);
+    background: linear-gradient(135deg, #112368 0%, #131a36 100%);
     color: aliceblue;
+}
+
+.reserva-burbuja p {
+    color: rgba(240, 248, 255, 0.651);
 }
 
 .servicios-burbuja {
-    background: linear-gradient(135deg, #0447ac 0%, #12c1e4 100%);
-    color: aliceblue;
+    background-color: white;
+    color: #112368;
+    box-shadow: 0 0 100px 2px rgba(3, 3, 3, 0.075);
 }
 
 .servicios-burbuja:hover {
-    box-shadow: 0 4px 8px rgba(5, 43, 68, 0.616);
     transition: all 0.2s ease-in-out;
     transform: translateY(-4px);
+}
+
+.servicios-burbuja p {
+    color: #1122689c;
 }

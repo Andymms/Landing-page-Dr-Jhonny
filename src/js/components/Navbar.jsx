@@ -8,15 +8,17 @@ export const Navbar = () => {
                 <div className="collapse navbar-collapse flex-grow-0" id="navbarNav">
                     <ul className="nav nav-pills navbar-nav">
                         <li className="nav-item"><a className="nav-link" href="#inicio"
-                            style={{ color: "#0447ac" }}>INICIO</a></li>
+                            style={{ color: "#131a36" }}>INICIO</a></li>
                         <li className="nav-item"><a className="nav-link" href="#servicios"
-                            style={{ color: "#0447ac" }}>SERVICIOS</a></li>
+                            style={{ color: "#131a36" }}>SERVICIOS</a></li>
                         <li className="nav-item"><a className="nav-link" href="#sobre-mi"
-                            style={{ color: "#0447ac" }}>SOBRE MI</a></li>
+                            style={{ color: "#131a36" }}>SOBRE MI</a></li>
                         <li className="nav-item"><a className="nav-link" href="#reserva"
-                            style={{ color: "#0447ac" }}>RESERVA</a></li>
+                            style={{ color: "#131a36" }}>RESERVA</a></li>
+                        <li className="nav-item"><a className="nav-link" href="#testimonios"
+                            style={{ color: "#131a36" }}>TESTIMONIOS</a></li>
 
-                        <button className="contacto-button btn rounded-pill ms-5">
+                        <button className="contacto-button btn ms-5">
                             <a href="https://wa.link/k958yl" target="_blank" rel="noopener noreferrer" className="text-white text-decoration-none d-flex align-items-center gap-2 px-3 py-2">
                                 CONTACTO
                             </a>
