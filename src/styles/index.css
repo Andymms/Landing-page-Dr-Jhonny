@@ -1,74 +1,709 @@
-html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 50px; 
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap');
+
+/* ==================== DESIGN TOKENS ==================== */
+:root {
+  --navy-deep:         #0d1530;
+  --navy-mid:          #131a36;
+  --navy-light:        #1e2d5e;
+  --navy-pale:         #e8eeff;
+  --purple:            #b476c0;
+  --purple-light:      #d4a8dd;
+  --purple-dark:       #8d4fa0;
+  --purple-pale:       rgba(180, 118, 192, 0.08);
+  --green:             #25d366;
+  --bg:                #f4f6fc;
+  --white:             #ffffff;
+  --text-muted:        rgba(19, 26, 54, 0.55);
+  --card-shadow:       0 4px 30px rgba(13, 21, 48, 0.07);
+  --card-shadow-hover: 0 16px 50px rgba(13, 21, 48, 0.14);
+  --radius-lg:         24px;
+  --radius-md:         16px;
+  --ease:              cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-nav {
-    font-size: 20px;
+/* ==================== BASE ==================== */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background-color: var(--bg);
+  color: var(--navy-mid);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* ==================== ANIMATIONS ==================== */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-8px); }
+}
+
+/* ==================== TYPOGRAPHY HELPERS ==================== */
+.section-eyebrow {
+  display: inline-block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--purple);
+  margin-bottom: 0.5rem;
+}
+
+.section-eyebrow-light {
+  display: inline-block;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 0.5rem;
+}
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.6rem;
+  font-weight: 600;
+  color: var(--navy-mid);
+  line-height: 1.15;
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+}
+
+/* ==================== NAVBAR ==================== */
+.nav-custom {
+  background: rgba(244, 246, 252, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  transition: all 0.3s var(--ease);
+  border-bottom: 1px solid transparent;
+}
+
+.nav-scrolled {
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  border-bottom-color: rgba(19, 26, 54, 0.08);
+  box-shadow: 0 4px 20px rgba(13, 21, 48, 0.08);
+}
+
+.nav-brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--navy-mid) !important;
+  text-decoration: none;
+  letter-spacing: 0.01em;
+}
+
+.brand-dr {
+  color: var(--purple);
+}
+
+.nav-link-custom {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--navy-mid) !important;
+  padding: 0.5rem 0.75rem !important;
+  border-radius: 8px;
+  transition: all 0.2s var(--ease);
+  background: transparent !important;
+}
+
+.nav-link-custom:hover {
+  color: var(--purple) !important;
+  background: var(--purple-pale) !important;
 }
 
 .contacto-button {
-    background-color: #112368;
-    border-radius: 20px;
-    color: white;
-    
-    transition: all 0.2s ease-in-out;
-    font-size: 15px;
-    letter-spacing: 1px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  background-color: var(--navy-mid);
+  border: none;
+  border-radius: 12px;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  transition: all 0.25s var(--ease);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
 }
 
 .contacto-button:hover {
-    background-color: #112368;
-    transform: translateY(-2px);
-    color: aliceblue;
+  background-color: var(--purple);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(180, 118, 192, 0.35);
 }
 
-.contacto-button:active {
-    background-color: #112268c4;
-    transform: translateY(1px);
-    color: aliceblue !important;
+/* ==================== HERO / JUMBOTRON ==================== */
+.jumbotron-section {
+  position: relative;
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--navy-pale) 0%, #f0efff 60%, #fdf2ff 100%);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 100px 0 60px;
 }
 
-.nav-item {
-    transition: all 0.2s ease-in-out;
+.jumbotron-bg-orb {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
 }
 
-.nav-item:hover {
-    transform: translateY(-2px);
+.jumbotron-bg-orb-1 {
+  top: -120px;
+  right: -120px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(180, 118, 192, 0.14) 0%, transparent 70%);
 }
 
-.nav-item:active {
-    transform: translateY(1px);
+.jumbotron-bg-orb-2 {
+  bottom: -150px;
+  left: -100px;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(17, 35, 104, 0.06) 0%, transparent 70%);
 }
 
-.nav-link {
-    background-color: transparent !important;
+.jumbotron-container {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
 }
 
-.jumbotron {
-    background-color: #e4eaff;
+.jumbotron-content {
+  flex: 1;
+  animation: fadeInUp 0.8s var(--ease) both;
 }
 
-.reserva-burbuja {
-    background: linear-gradient(135deg, #112368 0%, #131a36 100%);
-    color: aliceblue;
+.jumbotron-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: rgba(180, 118, 192, 0.12);
+  color: var(--purple-dark);
+  border: 1px solid rgba(180, 118, 192, 0.25);
+  border-radius: 100px;
+  padding: 0.35rem 1rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  margin-bottom: 1.25rem;
 }
 
-.reserva-burbuja p {
-    color: rgba(240, 248, 255, 0.651);
+.jumbotron-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--navy-mid);
+  line-height: 1.05;
+  margin-bottom: 0.35rem;
 }
 
-.servicios-burbuja {
-    background-color: white;
-    color: #112368;
-    box-shadow: 0 0 100px 2px rgba(3, 3, 3, 0.075);
+.jumbotron-subtitle {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--purple);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
 }
 
-.servicios-burbuja:hover {
-    transition: all 0.2s ease-in-out;
-    transform: translateY(-4px);
+.jumbotron-text {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-muted);
+  max-width: 460px;
+  margin-bottom: 2.5rem;
 }
 
-.servicios-burbuja p {
-    color: #1122689c;
+.jumbotron-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-primary-custom {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.9rem 2rem;
+  background: var(--navy-mid);
+  color: white;
+  border-radius: 14px;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: all 0.25s var(--ease);
+  display: inline-block;
+}
+
+.btn-primary-custom:hover {
+  background: var(--purple);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(180, 118, 192, 0.4);
+}
+
+.btn-secondary-custom {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding: 0.9rem 2rem;
+  background: transparent;
+  color: var(--navy-mid);
+  border: 1.5px solid rgba(19, 26, 54, 0.2);
+  border-radius: 14px;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  transition: all 0.25s var(--ease);
+  display: inline-block;
+}
+
+.btn-secondary-custom:hover {
+  border-color: var(--purple);
+  color: var(--purple);
+  transform: translateY(-3px);
+}
+
+.jumbotron-image-wrapper {
+  position: relative;
+  flex-shrink: 0;
+  animation: fadeIn 1s var(--ease) 0.3s both;
+}
+
+.jumbotron-image-frame {
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0 30px 80px rgba(13, 21, 48, 0.2);
+}
+
+.jumbotron-image-frame::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 30px;
+  background: linear-gradient(160deg, rgba(180, 118, 192, 0.12) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.jumbotron-image {
+  width: 340px;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+}
+
+.jumbotron-stat-badge {
+  position: absolute;
+  background: white;
+  border-radius: 16px;
+  padding: 0.9rem 1.25rem;
+  box-shadow: 0 8px 30px rgba(13, 21, 48, 0.12);
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+}
+
+.stat-badge-1 {
+  bottom: 40px;
+  left: -55px;
+  animation: float 4s ease-in-out infinite;
+}
+
+.stat-badge-2 {
+  top: 40px;
+  right: -55px;
+  animation: float 4s ease-in-out 2s infinite;
+}
+
+.jumbotron-stat-badge .stat-number {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--navy-mid);
+  line-height: 1;
+}
+
+.jumbotron-stat-badge .stat-label {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  margin-top: 0.2rem;
+}
+
+/* ==================== SERVICIOS ==================== */
+.section-servicios {
+  padding: 100px 0;
+  background: var(--white);
+}
+
+.servicio-card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem 2rem;
+  height: 100%;
+  box-shadow: var(--card-shadow);
+  border: 1px solid rgba(19, 26, 54, 0.05);
+  transition: all 0.3s var(--ease);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.servicio-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.servicio-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+  font-size: 1.6rem;
+  flex-shrink: 0;
+}
+
+.servicio-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.45rem;
+  font-weight: 600;
+  color: var(--navy-mid);
+  margin-bottom: 0.75rem;
+  line-height: 1.2;
+}
+
+.servicio-desc {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+/* ==================== SOBRE MI ==================== */
+.section-sobre-mi {
+  padding: 100px 0;
+  background: var(--bg);
+}
+
+.sobre-mi-image-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.sobre-mi-image {
+  width: 100%;
+  max-width: 400px;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 20px 60px rgba(13, 21, 48, 0.15);
+  display: block;
+}
+
+.sobre-mi-credential {
+  position: absolute;
+  bottom: -18px;
+  right: -18px;
+  background: var(--navy-mid);
+  color: white;
+  border-radius: 16px;
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  box-shadow: 0 10px 30px rgba(13, 21, 48, 0.25);
+  min-width: 185px;
+}
+
+.sobre-mi-credential-icon {
+  font-size: 1.4rem;
+  color: var(--purple-light);
+  flex-shrink: 0;
+}
+
+.sobre-mi-credential strong {
+  display: block;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.sobre-mi-credential small {
+  font-size: 0.72rem;
+  opacity: 0.65;
+  display: block;
+}
+
+.sobre-mi-text {
+  font-size: 1rem;
+  line-height: 1.85;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
+}
+
+.sobre-mi-stats {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(19, 26, 54, 0.1);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--navy-mid);
+  line-height: 1;
+}
+
+.stat-lab {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  margin-top: 0.25rem;
+  white-space: nowrap;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 40px;
+  background: rgba(19, 26, 54, 0.12);
+}
+
+/* ==================== RESERVA ==================== */
+.section-reserva {
+  padding: 80px 0;
+  background: var(--bg);
+}
+
+.reserva-card {
+  position: relative;
+  background: linear-gradient(135deg, var(--navy-mid) 0%, #1e2d5e 50%, #0d1a40 100%);
+  border-radius: 28px;
+  padding: 4rem;
+  overflow: hidden;
+}
+
+.reserva-orb {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.reserva-orb-1 {
+  top: -80px;
+  right: -80px;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(180, 118, 192, 0.2) 0%, transparent 70%);
+}
+
+.reserva-orb-2 {
+  bottom: -60px;
+  left: -60px;
+  width: 200px;
+  height: 200px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.04) 0%, transparent 70%);
+}
+
+.reserva-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 0.75rem;
+  line-height: 1.15;
+}
+
+.reserva-desc {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.75;
+  margin-bottom: 0;
+  max-width: 480px;
+}
+
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #25d366;
+  color: white;
+  text-decoration: none;
+  padding: 1rem 1.75rem;
+  border-radius: 16px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.01em;
+  transition: all 0.25s var(--ease);
+  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.3);
+  white-space: nowrap;
+}
+
+.btn-whatsapp:hover {
+  background: #1db954;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 16px 35px rgba(37, 211, 102, 0.45);
+}
+
+.btn-whatsapp-icon {
+  font-size: 1.3rem;
+}
+
+/* ==================== TESTIMONIOS ==================== */
+.section-testimonios {
+  padding: 100px 0;
+  background: var(--white);
+}
+
+.testimonio-card {
+  background: var(--bg);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem 2.5rem;
+  height: 100%;
+  border: 1px solid rgba(19, 26, 54, 0.05);
+  transition: all 0.3s var(--ease);
+  position: relative;
+}
+
+.testimonio-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--card-shadow-hover);
+}
+
+.testimonio-quote-mark {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 5.5rem;
+  line-height: 0.7;
+  color: var(--purple-light);
+  opacity: 0.35;
+  display: block;
+  margin-bottom: 0.5rem;
+  user-select: none;
+}
+
+.testimonio-stars {
+  display: flex;
+  gap: 0.2rem;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.testimonio-text {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: var(--navy-mid);
+  font-style: italic;
+  margin-bottom: 1.25rem;
+}
+
+.testimonio-author {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--purple);
+  margin: 0;
+  font-style: normal;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 992px) {
+  .jumbotron-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+  }
+
+  .jumbotron-content { order: 2; }
+  .jumbotron-image-wrapper { order: 1; }
+
+  .jumbotron-title { font-size: 3rem; }
+
+  .jumbotron-actions { justify-content: center; }
+  .jumbotron-text { max-width: 100%; }
+
+  .stat-badge-1 { left: -20px; }
+  .stat-badge-2 { right: -20px; }
+
+  .reserva-card { padding: 3rem 2.5rem; }
+}
+
+@media (max-width: 768px) {
+  .section-title { font-size: 2rem; }
+  .jumbotron-title { font-size: 2.5rem; }
+
+  .jumbotron-image {
+    width: 260px;
+    height: 320px;
+  }
+
+  .stat-badge-1, .stat-badge-2 { display: none; }
+
+  .sobre-mi-credential { right: 0; }
+
+  .reserva-title { font-size: 2rem; }
+
+  .section-servicios,
+  .section-sobre-mi,
+  .section-testimonios { padding: 70px 0; }
+}
+
+@media (max-width: 576px) {
+  .jumbotron-title { font-size: 2.1rem; }
+  .jumbotron-subtitle { font-size: 0.85rem; }
+
+  .jumbotron-actions {
+    flex-direction: column;
+  }
+
+  .btn-primary-custom,
+  .btn-secondary-custom {
+    text-align: center;
+    width: 100%;
+  }
+
+  .reserva-card { padding: 2.5rem 1.5rem; }
+
+  .reserva-title { font-size: 1.8rem; }
+
+  .sobre-mi-stats { gap: 1.25rem; }
 }

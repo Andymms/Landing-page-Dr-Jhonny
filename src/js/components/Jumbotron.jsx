@@ -2,17 +2,58 @@ import React from "react";
 
 export const Jumbotron = () => {
     return (
-        <section id="inicio" className="container-flex d-flex justify-content-center jumbotron my-5">
-            <div className="d-flex container">
-                <div className="container align-self-center">
-                    <h1 style={{ color: "#131a36" }}> Dr. Jhonny Mujica: Cirujano Mastologo </h1>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        <section id="inicio" className="jumbotron-section">
+            {/* Background orbs */}
+            <div className="jumbotron-bg-orb jumbotron-bg-orb-1"></div>
+            <div className="jumbotron-bg-orb jumbotron-bg-orb-2"></div>
+
+            <div className="container jumbotron-container">
+                {/* Text content */}
+                <div className="jumbotron-content">
+                    <div className="jumbotron-badge">
+                        <i className="fa-solid fa-ribbon"></i>
+                        Mastología Especializada
+                    </div>
+
+                    <h1 className="jumbotron-title">Dr. Jhonny Mujica</h1>
+                    <h2 className="jumbotron-subtitle">Cirujano Mastólogo</h2>
+
+                    <p className="jumbotron-text">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                         Sunt voluptates deleniti libero. Similique modi vero, sunt,
-                        assumenda minima aliquam, voluptatum excepturi repellendus
-                        commodi iusto debitis tempore ullam! Rem, quod exercitationem
+                        assumenda minima aliquam.
                     </p>
+
+                    <div className="jumbotron-actions">
+                        <a href="#reserva" className="btn-primary-custom">
+                            Reservar consulta
+                        </a>
+                        <a href="#sobre-mi" className="btn-secondary-custom">
+                            Conocer más
+                        </a>
+                    </div>
                 </div>
-                <img src="https://placehold.co/400x500" alt="DR image" className="m-5" />
+
+                {/* Image */}
+                <div className="jumbotron-image-wrapper">
+                    <div className="jumbotron-image-frame">
+                        <img
+                            src="https://placehold.co/400x500"
+                            alt="Dr. Jhonny Mujica"
+                            className="jumbotron-image"
+                        />
+                    </div>
+
+                    {/* Floating stat badges */}
+                    <div className="jumbotron-stat-badge stat-badge-1">
+                        <span className="stat-number">+30</span>
+                        <span className="stat-label">Años de experiencia</span>
+                    </div>
+                    <div className="jumbotron-stat-badge stat-badge-2">
+                        <span className="stat-number">+5000</span>
+                        <span className="stat-label">Pacientes atendidos</span>
+                    </div>
+                </div>
             </div>
         </section>
     );

@@ -1,24 +1,55 @@
 import React from "react";
+const servicios = [
+    {
+        icon: "fa-solid fa-laptop-medical",
+        color: "#b476c0",
+        bg: "rgba(180, 118, 192, 0.1)",
+        title: "Consulta",
+        description:
+            "Personalizada con atención médica online o presencial, brindando confianza en cada paso.",
+    },
+    {
+        icon: "fa-solid fa-vial",
+        color: "#0d9249",
+        bg: "rgba(13, 146, 73, 0.1)",
+        title: "Biopsia de mama",
+        description:
+            "Diagnóstico preciso mediante procedimientos seguros y especializados de última generación.",
+    },
+    {
+        icon: "fa-solid fa-scissors",
+        color: "#4a7fd4",
+        bg: "rgba(74, 127, 212, 0.1)",
+        title: "Cirugía de tumores mamarios",
+        description:
+            "Procedimientos quirúrgicos especializados realizados con los más altos estándares de calidad.",
+    },
+];
 
 export const Servicios = () => {
     return (
-        <section id="servicios" className="container-flex bg-light d-flex align-items-center my-5 flex-column">
-            <h1 className="mb-5 p-2" style={{ color: "#131a36" }}>Servicios Especializados</h1>
-            <div className="d-flex align-items-stretch">
-                <div className="mx-3 servicios-burbuja rounded-5 d-flex flex-column p-5 align-items-center" style={{ width: "300px" }} >
-                    <i className="fa-solid fa-laptop-medical" style={{ color: "#b476c0", fontSize: "3rem" }}></i>
-                    <h1 className="">Consulta</h1>
-                    <p className="justify-content">Personalizada con atención médica online o presencial y de confianza</p>
+        <section id="servicios" className="section-servicios">
+            <div className="container">
+                <div className="section-header text-center mb-5">
+                    <span className="section-eyebrow">Lo que ofrezco</span>
+                    <h2 className="section-title">Servicios Especializados</h2>
                 </div>
-                <div className="mx-3 servicios-burbuja rounded-5 d-flex flex-column p-5 align-items-center" style={{ width: "300px" }} >
-                    <i className="fa-solid fa-vial" style={{ color: "#0d9249", fontSize: "3rem" }}></i>
-                    <h1 className="">Biopsia de mama</h1>
-                    <p className="justify-content">Diagnóstico preciso y tratamiento adecuado</p>
-                </div>
-                <div className="mx-3 servicios-burbuja rounded-5 d-flex flex-column p-5 align-items-center" style={{ width: "300px" }} >
-                    <i className="fa-solid fa-scissors" style={{ color: "#969696", fontSize: "3rem" }}></i>
-                    <h1 className="">Cirugía de tumores mamarios</h1>
-                    <p className="justify-content">Procedimientos quirúrgicos especializados de confianza</p>
+
+                <div className="row g-4 justify-content-center">
+                    {servicios.map((s, i) => (
+                        <div className="col-lg-4 col-md-6" key={i}>
+                            <div className="servicio-card">
+                                <div
+                                    className="servicio-icon"
+                                    style={{ backgroundColor: s.bg }}
+                                >
+                                    <i className={s.icon} style={{ color: s.color }}></i>
+                                </div>
+                                <h3 className="servicio-title">{s.title}</h3>
+                                <p className="servicio-desc">{s.description}</p>
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
         </section>

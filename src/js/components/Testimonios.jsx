@@ -1,32 +1,61 @@
 import React from "react";
 
+const testimonios = [
+    {
+        text: "Excelente atención y un trato muy profesional. Me explicó todo con claridad y me sentí muy segura desde el primer momento.",
+        name: "María G.",
+        stars: 5,
+    },
+    {
+        text: "El Dr. Mujica me acompañó en cada etapa del proceso con mucha paciencia. No podría haber estado en mejores manos.",
+        name: "Ana P.",
+        stars: 5,
+    },
+    {
+        text: "Muy profesional y atento. El diagnóstico fue preciso y el seguimiento post-operatorio fue impecable.",
+        name: "Carmen R.",
+        stars: 5,
+    },
+    {
+        text: "Recomiendo ampliamente al Dr. Mujica. Transmite mucha confianza y seguridad en cada consulta.",
+        name: "Laura M.",
+        stars: 5,
+    },
+];
+
 export const Testimonios = () => {
     return (
-        <section id="testimonios" className="container-flex d-flex bg-light align-items-center my-5 p-5 flex-column">
-            <h1 className="p-1" style={{ color: "#b476c0" }}>Testimonios</h1>
-            <p className="mb-5 p-1 fs-5" style={{ color: "#131a36" }}>Lo que dicen mis pacientes</p>
-            <div className="d-flex">
-                <div className="mx-3 fs-5 servicios-burbuja rounded-5 bg-light d-flex flex-column p-5 align-items-center"
-                    style={{ width: "500px" }} >
-                    <p className="fst-italic" style={{ color: "#131a36" }}>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
-                    <h4 className="mt-2 ms-auto" style={{ color: "#b476c0" }}>- Paciente 1</h4>
+        <section id="testimonios" className="section-testimonios">
+            <div className="container">
+                <div className="section-header text-center mb-5">
+                    <span className="section-eyebrow">Opiniones</span>
+                    <h2 className="section-title" style={{ color: "#b476c0" }}>
+                        Testimonios
+                    </h2>
+                    <p className="section-subtitle">Lo que dicen mis pacientes</p>
                 </div>
-                <div className="mx-3 fs-5 servicios-burbuja rounded-5 bg-light d-flex flex-column p-5 align-items-center"
-                    style={{ width: "500px" }} >
-                    <p className="fst-italic" style={{ color: "#131a36" }}>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
-                    <h4 className="mt-2 ms-auto" style={{ color: "#b476c0" }}>- Paciente 1</h4>
-                </div>
-            </div>
-            <div className="d-flex mt-5">
-                <div className="mx-3 fs-5 servicios-burbuja rounded-5 bg-light d-flex flex-column p-5 align-items-center"
-                    style={{ width: "500px" }} >
-                    <p className="fst-italic" style={{ color: "#131a36" }}>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
-                    <h4 className="mt-2 ms-auto" style={{ color: "#b476c0" }}>- Paciente 1</h4>
-                </div>
-                <div className="mx-3 fs-5 servicios-burbuja rounded-5 bg-light d-flex flex-column p-5 align-items-center"
-                    style={{ width: "500px" }} >
-                    <p className="fst-italic" style={{ color: "#131a36" }}>"Lorem ipsum dolor sit amet, consectetur adipiscing elit."</p>
-                    <h4 className="mt-2 ms-auto" style={{ color: "#b476c0" }}>- Paciente 1</h4>
+
+                <div className="row g-4">
+                    {testimonios.map((t, i) => (
+                        <div className="col-lg-6" key={i}>
+                            <div className="testimonio-card">
+                                <span className="testimonio-quote-mark">"</span>
+
+                                <div className="testimonio-stars">
+                                    {[...Array(t.stars)].map((_, si) => (
+                                        <i
+                                            key={si}
+                                            className="fa-solid fa-star"
+                                            style={{ color: "#f4b942" }}
+                                        ></i>
+                                    ))}
+                                </div>
+
+                                <p className="testimonio-text">{t.text}</p>
+                                <p className="testimonio-author">— {t.name}</p>
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
         </section>

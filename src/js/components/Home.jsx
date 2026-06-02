@@ -5,10 +5,12 @@ import { SobreMi } from "./SobreMi.jsx";
 import { ReservaConsulta } from "./ReservaConsulta.jsx";
 import { Servicios } from "./Servicios.jsx";
 import { Testimonios } from "./Testimonios.jsx";
+import { Entrevistas } from "./Entrevistas.jsx";
 
 export const Home = () => {
     return (
         <div className="min-vh-100 bg-light">
+
             <Navbar />
 
             <main>
@@ -17,6 +19,8 @@ export const Home = () => {
                 <SobreMi />
                 <ReservaConsulta />
                 <Testimonios />
+                <Entrevistas />
+
             </main>
 
         </div>
