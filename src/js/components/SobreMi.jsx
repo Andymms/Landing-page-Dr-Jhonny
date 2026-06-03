@@ -9,7 +9,7 @@ export const SobreMi = () => {
                     <div className="col-lg-5 d-flex justify-content-center">
                         <div className="sobre-mi-image-wrapper">
                             <img
-                                src="https://placehold.co/400x500"
+                                src="/src/img/Sobre Mi.jpg"
                                 alt="Dr. Jhonny Mujica"
                                 className="sobre-mi-image"
                             />
@@ -29,10 +29,17 @@ export const SobreMi = () => {
                         <h2 className="section-title">Sobre Mí</h2>
 
                         <p className="sobre-mi-text">
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                            Sunt voluptates deleniti libero. Similique modi vero, sunt,
-                            assumenda minima aliquam, voluptatum excepturi repellendus
-                            commodi iusto debitis tempore ullam! Rem, quod exercitationem.
+                            La Mastología moderna exige un enfoque personalizado — y ese es
+                            exactamente el compromiso que asumo con cada paciente. <br /> <br />
+                            Con más de 15 años dedicados exclusivamente al diagnóstico y
+                            tratamiento del cáncer de mama y patologías mamarias benignas,
+                            combino formación de élite con un trato cercano e individualizado. <br /> <br />
+                            Me formé en la Universidad Central de Venezuela y realicé mi Máster
+                            en Senología y Patología Mamaria en la Universidad de Barcelona
+                            (Hospital Clínic), una de las instituciones de referencia mundial
+                            en la especialidad. <br /> <br />
+                            Hoy ejerzo con un único objetivo: que cada paciente reciba
+                            el diagnóstico más preciso y el tratamiento más avanzado disponible.
                         </p>
 
                         <div className="sobre-mi-stats">

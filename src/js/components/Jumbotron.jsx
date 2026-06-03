@@ -19,9 +19,9 @@ export const Jumbotron = () => {
                     <h2 className="jumbotron-subtitle">Cirujano Mastólogo</h2>
 
                     <p className="jumbotron-text">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                        Sunt voluptates deleniti libero. Similique modi vero, sunt,
-                        assumenda minima aliquam.
+                        Especialista en Mastología con formación internacional,
+                        comprometido con el cuidado personalizado, el diagnóstico preciso
+                        y el tratamiento avanzado de la patología mamaria.
                     </p>
 
                     <div className="jumbotron-actions">
@@ -38,7 +38,7 @@ export const Jumbotron = () => {
                 <div className="jumbotron-image-wrapper">
                     <div className="jumbotron-image-frame">
                         <img
-                            src="https://placehold.co/400x500"
+                            src="src/img/Dr Mujica.jpg"
                             alt="Dr. Jhonny Mujica"
                             className="jumbotron-image"
                         />

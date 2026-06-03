@@ -1,25 +1,23 @@
 import React from "react";
+
 const servicios = [
     {
-        icon: "fa-solid fa-laptop-medical",
-        color: "#b476c0",
-        bg: "rgba(180, 118, 192, 0.1)",
+        image: "src/img/Consulta.jpg",
+        alt: "Consulta médica",
         title: "Consulta",
         description:
             "Personalizada con atención médica online o presencial, brindando confianza en cada paso.",
     },
     {
-        icon: "fa-solid fa-vial",
-        color: "#0d9249",
-        bg: "rgba(13, 146, 73, 0.1)",
+        image: "src/img/biopsia.jpg",
+        alt: "Biopsia de mama",
         title: "Biopsia de mama",
         description:
             "Diagnóstico preciso mediante procedimientos seguros y especializados de última generación.",
     },
     {
-        icon: "fa-solid fa-scissors",
-        color: "#4a7fd4",
-        bg: "rgba(74, 127, 212, 0.1)",
+        image: "src/img/cirugia.jpg",
+        alt: "Cirugía de tumores mamarios",
         title: "Cirugía de tumores mamarios",
         description:
             "Procedimientos quirúrgicos especializados realizados con los más altos estándares de calidad.",
@@ -39,11 +37,12 @@ export const Servicios = () => {
                     {servicios.map((s, i) => (
                         <div className="col-lg-4 col-md-6" key={i}>
                             <div className="servicio-card">
-                                <div
-                                    className="servicio-icon"
-                                    style={{ backgroundColor: s.bg }}
-                                >
-                                    <i className={s.icon} style={{ color: s.color }}></i>
+                                <div className="servicio-image-wrapper">
+                                    <img
+                                        src={s.image}
+                                        alt={s.alt}
+                                        className="servicio-image"
+                                    />
                                 </div>
                                 <h3 className="servicio-title">{s.title}</h3>
                                 <p className="servicio-desc">{s.description}</p>
