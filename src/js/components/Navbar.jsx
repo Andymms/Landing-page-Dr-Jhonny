@@ -41,7 +41,7 @@ export const Navbar = () => {
                             <a className="nav-link nav-link-custom" href="#sobre-mi">SOBRE MÍ</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link nav-link-custom" href="#reserva">RESERVA</a>
+                            <a className="nav-link nav-link-custom" href="#reserva">PEDIR CITA</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link nav-link-custom" href="#testimonios">TESTIMONIOS</a>

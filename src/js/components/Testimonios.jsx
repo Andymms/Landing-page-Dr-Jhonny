@@ -2,17 +2,17 @@ import React from "react";
 
 const testimonios = [
     {
-        text: "Excelente atención y un trato muy profesional. Me explicó todo con claridad y me sentí muy segura desde el primer momento.",
+        text: "Excelente atención y un trato muy cercano. Me explicó todo con claridad y me sentí muy segura desde el primer momento.",
         name: "María G.",
         stars: 5,
     },
     {
-        text: "El Dr. Mujica me acompañó en cada etapa del proceso con mucha paciencia. No podría haber estado en mejores manos.",
+        text: "El Dr. Mujica me acompañó en cada etapa del proceso con mucha paciencia. No podría haber estado en mejores manos. Se ganó mi confianza desde el primer minuto.",
         name: "Ana P.",
         stars: 5,
     },
     {
-        text: "Muy profesional y atento. El diagnóstico fue preciso y el seguimiento post-operatorio fue impecable.",
+        text: "Muy profesional y atento. El diagnóstico fue preciso y el seguimiento post-operatorio fue impecable. Siempre está disponible",
         name: "Carmen R.",
         stars: 5,
     },

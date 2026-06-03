@@ -13,13 +13,7 @@ export const SobreMi = () => {
                                 alt="Dr. Jhonny Mujica"
                                 className="sobre-mi-image"
                             />
-                            <div className="sobre-mi-credential">
-                                <i className="fa-solid fa-award sobre-mi-credential-icon"></i>
-                                <div>
-                                    <strong>Certificado</strong>
-                                    <small>Mastólogo certificado</small>
-                                </div>
-                            </div>
+                            <p className="photo-leyend"> Conferencia XVII Congreso Venezolano de Mastología</p>
                         </div>
                     </div>
 
@@ -32,14 +26,15 @@ export const SobreMi = () => {
                             La Mastología moderna exige un enfoque personalizado — y ese es
                             exactamente el compromiso que asumo con cada paciente. <br /> <br />
                             Con más de 15 años dedicados exclusivamente al diagnóstico y
-                            tratamiento del cáncer de mama y patologías mamarias benignas,
+                            tratamiento de enfermedades benignas y cáncer de mama,
                             combino formación de élite con un trato cercano e individualizado. <br /> <br />
-                            Me formé en la Universidad Central de Venezuela y realicé mi Máster
-                            en Senología y Patología Mamaria en la Universidad de Barcelona
-                            (Hospital Clínic), una de las instituciones de referencia mundial
-                            en la especialidad. <br /> <br />
+                            Me formé en la Universidad Central de Venezuela y realicé el Máster
+                            en Senología y Patología Mamaria en la Universidad de Barcelona, España,
+                            el cual incluyó pasantías en el Hospital Clinic de Barcelona, Hospital Clínico
+                            de Madrid y el Instituto Europeo de Oncología (IEO), todas ellas
+                            instituciones de referencia mundial en la especialidad.  <br /> <br />
                             Hoy ejerzo con un único objetivo: que cada paciente reciba
-                            el diagnóstico más preciso y el tratamiento más avanzado disponible.
+                            el diagnóstico más preciso y el tratamiento individualizado más avanzado disponible.
                         </p>
 
                         <div className="sobre-mi-stats">

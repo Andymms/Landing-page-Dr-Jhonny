@@ -19,9 +19,9 @@ export const Jumbotron = () => {
                     <h2 className="jumbotron-subtitle">Cirujano Mastólogo</h2>
 
                     <p className="jumbotron-text">
-                        Especialista en Mastología con formación internacional,
-                        comprometido con el cuidado personalizado, el diagnóstico preciso
-                        y el tratamiento avanzado de la patología mamaria.
+                        Comprometido con el manejo personalizado y el diagnóstico 
+                        preciso del cáncer de mama — porque cada paciente merece
+                        un médico que esté presente, que escuche y que la acompañe en cada paso.
                     </p>
 
                     <div className="jumbotron-actions">

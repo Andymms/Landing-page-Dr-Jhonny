@@ -12,9 +12,10 @@ export const ReservaConsulta = () => {
                     <div className="row align-items-center position-relative">
                         <div className="col-lg-8">
                             <span className="section-eyebrow-light">¿Listo para comenzar?</span>
-                            <h2 className="reserva-title">Reserva tu turno ahora</h2>
+                            <h2 className="reserva-title">Pedir cita ahora</h2>
                             <p className="reserva-desc">
-                                Consulta personalizada con atención médica online o presencial.
+                                Consulta personalizada con atención médica online o presencial 
+                                en Caracas, Venezuela.
                                 Tu salud es nuestra prioridad.
                             </p>
                         </div>

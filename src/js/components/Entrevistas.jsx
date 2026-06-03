@@ -3,24 +3,23 @@ import React from "react";
 const entrevistas = [
     {
         id: "QayJH64hWMY",
-        title: "Alimentación y Bienestar con Domingo Porras",
+        title: "Alimentación y cáncer de mama",
         medio: "La Tizana GV",
+    },{
+        id: "41DL01uR2no",
+        title: "El diagnóstico temprano para superar el cáncer de mama",
+        medio: "Globovisión",
+    },{
+        id: "hotdUwuYcdw",
+        title: "Tu Médico en Casa Venezuela // Junto a el Dr. Jhonny Mujica",
+        medio: "Tu Médico En Casa",
     },
     {
         id: "OdiAFJzZjNg",
         title: "Prevención y manejo del cáncer de mama",
         medio: "Globovisión",
     },
-    {
-        id: "41DL01uR2no",
-        title: "El diagnostico precoz para lograr la cura del cáncer de mama",
-        medio: "Globovisión",
-    },
-    {
-        id: "hotdUwuYcdw",
-        title: "Tu Médico en Casa Venezuela // Junto a el Dr. Jhonny Mujica",
-        medio: "Tu Médico En Casa",
-    },
+    
 ];
 
 export const Entrevistas = () => {
