@@ -46,6 +46,9 @@ export const Navbar = () => {
                         <li className="nav-item">
                             <a className="nav-link nav-link-custom" href="#testimonios">TESTIMONIOS</a>
                         </li>
+                        <li className="nav-item">
+                            <a className="nav-link nav-link-custom" href="#entrevistas">ENTREVISTAS</a>
+                        </li>
                         <li className="nav-item ms-lg-3 mt-2 mt-lg-0">
                             <a
                                 href="https://wa.link/k958yl"

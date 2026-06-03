@@ -6,6 +6,7 @@ import { ReservaConsulta } from "./ReservaConsulta.jsx";
 import { Servicios } from "./Servicios.jsx";
 import { Testimonios } from "./Testimonios.jsx";
 import { Entrevistas } from "./Entrevistas.jsx";
+import { Footer } from "./Footer.jsx";
 
 export const Home = () => {
     return (
@@ -22,6 +23,8 @@ export const Home = () => {
                 <Entrevistas />
 
             </main>
+
+            <Footer />
 
         </div>
     );
