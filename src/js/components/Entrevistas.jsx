@@ -1,11 +1,5 @@
 import React from "react";
 
-// ─────────────────────────────────────────────────────────────
-//  Replace each `id` value with the YouTube video ID.
-//  e.g. for https://www.youtube.com/watch?v=dQw4w9WgXcQ
-//       the id is "dQw4w9WgXcQ"
-// ─────────────────────────────────────────────────────────────
-
 const entrevistas = [
     {
         id: "QayJH64hWMY",
@@ -19,8 +13,13 @@ const entrevistas = [
     },
     {
         id: "41DL01uR2no",
-        title: "El diagnostico precoz es fundamental para lograr la cura del cáncer de mama",
+        title: "El diagnostico precoz para lograr la cura del cáncer de mama",
         medio: "Globovisión",
+    },
+    {
+        id: "hotdUwuYcdw",
+        title: "Tu Médico en Casa Venezuela // Junto a el Dr. Jhonny Mujica",
+        medio: "Tu Médico En Casa",
     },
 ];
 
