@@ -12,14 +12,18 @@ export const Jumbotron = () => {
                 <div className="jumbotron-content">
                     <div className="jumbotron-badge">
                         <i className="fa-solid fa-ribbon"></i>
-                        Mastología Especializada
+                        Mastología
                     </div>
 
                     <h1 className="jumbotron-title">Dr. Jhonny Mujica</h1>
                     <h2 className="jumbotron-subtitle">Cirujano Mastólogo</h2>
 
+                    <p className="jumbotron-location">
+                        <i className="fa-solid fa-location-dot"></i> Caracas, Venezuela
+                    </p>
+
                     <p className="jumbotron-text">
-                        Comprometido con el manejo personalizado y el diagnóstico 
+                        Comprometido con el manejo personalizado y el diagnóstico
                         preciso del cáncer de mama — porque cada paciente merece
                         un médico que esté presente, que escuche y que la acompañe en cada paso.
                     </p>

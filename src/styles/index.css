@@ -238,7 +238,6 @@ h1, h2, h3, h4 {
   color: var(--purple);
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  margin-bottom: 1.5rem;
 }
 
 .jumbotron-text {
@@ -253,6 +252,22 @@ h1, h2, h3, h4 {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+}
+
+.jumbotron-location {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+  margin-bottom: 1.5rem;
+}
+
+.jumbotron-location i {
+  color: var(--purple);
+  font-size: 0.85rem;
 }
 
 .btn-primary-custom {

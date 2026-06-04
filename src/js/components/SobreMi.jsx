@@ -33,7 +33,7 @@ export const SobreMi = () => {
                             el cual incluyó pasantías en el Hospital Clinic de Barcelona, Hospital Clínico
                             de Madrid y el Instituto Europeo de Oncología (IEO), todas ellas
                             instituciones de referencia mundial en la especialidad.  <br /> <br />
-                            Hoy ejerzo con un único objetivo: que cada paciente reciba
+                            Hoy ejerzo en Caracas con un único objetivo: que cada paciente reciba
                             el diagnóstico más preciso y el tratamiento individualizado más avanzado disponible.
                         </p>
 
