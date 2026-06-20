@@ -92,3 +92,4 @@ dist/*
 !.eslintrc
 .now
 package-lock.json
+.env

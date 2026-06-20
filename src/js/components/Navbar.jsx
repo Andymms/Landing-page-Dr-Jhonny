@@ -1,8 +1,10 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
 
 export const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
+    const { pathname } = useLocation();
+    const isHome = pathname === "/";
 
     useEffect(() => {
         const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -10,10 +12,13 @@ export const Navbar = () => {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
+    // On sub-routes (blog, admin) anchor links need the full path prefix
+    const a = (hash) => isHome ? hash : `/${hash}`;
+
     return (
         <nav className={`navbar navbar-expand-lg fixed-top px-4 nav-custom ${scrolled ? "nav-scrolled" : ""}`}>
             <div className="container">
-                <a className="navbar-brand nav-brand" href="#inicio">
+                <a className="navbar-brand nav-brand" href={a("#inicio")}>
                     <span className="brand-dr">Dr.</span> Jhonny Mujica
                 </a>
 
@@ -32,22 +37,30 @@ export const Navbar = () => {
                 <div className="collapse navbar-collapse flex-grow-0" id="navbarNav">
                     <ul className="navbar-nav align-items-center gap-1 mt-3 mt-lg-0">
                         <li className="nav-item">
-                            <a className="nav-link nav-link-custom" href="#inicio">INICIO</a>
+                            <a className="nav-link nav-link-custom" href={a("#inicio")}>INICIO</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link nav-link-custom" href="#servicios">SERVICIOS</a>
+                            <a className="nav-link nav-link-custom" href={a("#servicios")}>SERVICIOS</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link nav-link-custom" href="#sobre-mi">SOBRE MÍ</a>
+                            <a className="nav-link nav-link-custom" href={a("#sobre-mi")}>SOBRE MÍ</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link nav-link-custom" href="#reserva">PEDIR CITA</a>
+                            <a className="nav-link nav-link-custom" href={a("#reserva")}>PEDIR CITA</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link nav-link-custom" href="#testimonios">TESTIMONIOS</a>
+                            <a className="nav-link nav-link-custom" href={a("#testimonios")}>TESTIMONIOS</a>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link nav-link-custom" href="#entrevistas">ENTREVISTAS</a>
+                            <a className="nav-link nav-link-custom" href={a("#entrevistas")}>ENTREVISTAS</a>
+                        </li>
+                        <li className="nav-item">
+                            <Link
+                                className={`nav-link nav-link-custom ${pathname.startsWith("/blog") ? "nav-link-blog-active" : ""}`}
+                                to="/blog"
+                            >
+                                BLOG
+                            </Link>
                         </li>
                         <li className="nav-item ms-lg-3 mt-2 mt-lg-0">
                             <a

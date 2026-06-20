@@ -1,18 +1,32 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HelmetProvider } from 'react-helmet-async'
 
-//Bootstrap
+// Bootstrap
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap"
 
-// index.css'
+// Styles
 import '../styles/index.css'
 
-// components
-import { Home } from './components/Home';
+// Pages / Components
+import { Home }     from './components/Home';
+import { BlogList } from './pages/BlogList';
+import { BlogPost } from './pages/BlogPost';
+import { Admin }    from './pages/Admin';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Home/>
+    <HelmetProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/"           element={<Home />} />
+          <Route path="/blog"       element={<BlogList />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/admin"      element={<Admin />} />
+        </Routes>
+      </BrowserRouter>
+    </HelmetProvider>
   </React.StrictMode>,
 )
