@@ -42,6 +42,7 @@ export const Servicios = () => {
                                         src={s.image}
                                         alt={s.alt}
                                         className="servicio-image"
+                                        loading="lazy"
                                     />
                                 </div>
                                 <h3 className="servicio-title">{s.title}</h3>

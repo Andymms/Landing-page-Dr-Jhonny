@@ -45,6 +45,7 @@ export const Jumbotron = () => {
                             src="src/img/Dr Mujica.jpg"
                             alt="Dr. Jhonny Mujica"
                             className="jumbotron-image"
+                            fetchPriority="high"
                         />
                     </div>
 
