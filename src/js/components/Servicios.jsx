@@ -2,21 +2,21 @@ import React from "react";
 
 const servicios = [
     {
-        image: "src/img/Consulta.jpg",
+        image: "/img/Consulta.jpg",
         alt: "Consulta médica",
         title: "Consulta",
         description:
             "Personalizada con atención médica online o presencial, brindando confianza en cada paso.",
     },
     {
-        image: "src/img/biopsia.jpg",
+        image: "/img/biopsia.jpg",
         alt: "Biopsia de mama",
         title: "Biopsia de mama",
         description:
             "Diagnóstico preciso mediante procedimientos seguros y especializados de última generación.",
     },
     {
-        image: "src/img/cirugia.jpg",
+        image: "/img/cirugia.jpg",
         alt: "Cirugía de tumores mamarios",
         title: "Cirugía de tumores mamarios",
         description:

@@ -9,7 +9,7 @@ export const SobreMi = () => {
                     <div className="col-lg-5 d-flex justify-content-center">
                         <div className="sobre-mi-image-wrapper">
                             <img
-                                src="/src/img/Sobre Mi.jpg"
+                                src="/img/SobreMi.jpg"
                                 alt="Dr. Jhonny Mujica"
                                 className="sobre-mi-image"
                             />
