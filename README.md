@@ -34,7 +34,7 @@ El sitio ha sido diseñado meticulosamente con un enfoque mobile-first y optimiz
 ```text
 ├── src/
 │   ├── components/      # Componentes UI reutilizables (Navbar, Footer, etc.)
-│   ├── views/           # Vistas y secciones principales (Hero/Inicio, Sobre Mí, Servicios, Contacto)
+│   ├── pages/           # Vistas y secciones principales (Hero/Inicio, Sobre Mí, Servicios, Contacto)
 │   ├── styles/          # Hojas de estilo globales y variables CSS (index.css)
 │   ├── main.jsx         # Punto de entrada de la aplicación React
 │   └── index.html       # Plantilla base (contiene la optimización del favicon SVG)
