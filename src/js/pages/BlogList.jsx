@@ -44,8 +44,8 @@ export const BlogList = () => {
                     <div className="container">
                         {/* Header */}
                         <div className="text-center mb-5">
-                            <span className="section-eyebrow">Salud mamaria</span>
-                            <h1 className="section-title">Blog</h1>
+                            <span className="section-eyebrow">RECURSOS Y ARTÍCULOS</span>
+                            <h1 className="section-title">Tu guía de salud mamaria</h1>
                             <p className="section-subtitle">
                                 Información médica de confianza para cuidar tu salud
                             </p>

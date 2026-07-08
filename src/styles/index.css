@@ -771,6 +771,97 @@ h1, h2, h3, h4 {
   margin: 0;
 }
 
+/* ==================== WHATSAPP FLOAT ==================== */
+@keyframes waPop {
+  0%   { opacity: 0; transform: scale(0.6) translateY(20px); }
+  70%  { transform: scale(1.07) translateY(-2px); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+@keyframes waPulse {
+  0%, 100% { box-shadow: 0 8px 25px rgba(37, 211, 102, 0.35); }
+  50%       { box-shadow: 0 8px 32px rgba(37, 211, 102, 0.6), 0 0 0 8px rgba(37, 211, 102, 0.08); }
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  z-index: 1050;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 0;
+  overflow: hidden;
+
+  background: #25d366;
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+
+  /* collapsed: just the icon */
+  width: 54px;
+  height: 54px;
+  padding: 0 13px;
+
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  
+  transition:
+    width     0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    padding   0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    gap       0.2s  cubic-bezier(0.4, 0, 0.2, 1),
+    background 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    transform  0.25s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+
+  animation:
+    waPop    0.5s cubic-bezier(0.4, 0, 0.2, 1) 1.2s both,
+    waPulse  2.8s ease-in-out 2s infinite;
+}
+
+.whatsapp-float:hover {
+  width: 185px;
+  padding: 0 20px;
+  gap: 0.55rem;
+  background: #1db954;
+  color: white;
+  transform: translateY(-3px);
+  animation: none; /* stop pulse on hover */
+  box-shadow: 0 14px 35px rgba(37, 211, 102, 0.45);
+}
+
+.whatsapp-float-icon {
+  font-size: 1.45rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.whatsapp-float-label {
+  opacity: 0;
+  max-width: 0;
+  overflow: hidden;
+  transition:
+    opacity  0.2s ease 0.1s,
+    max-width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.whatsapp-float:hover .whatsapp-float-label {
+  opacity: 1;
+  max-width: 140px;
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .whatsapp-float {
+    animation: none;
+    opacity: 1;
+  }
+}
+
 /* ==================== RESPONSIVE ==================== */
 @media (max-width: 992px) {
   .jumbotron-container {

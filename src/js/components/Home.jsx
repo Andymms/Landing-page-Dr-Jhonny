@@ -7,6 +7,7 @@ import { Servicios } from "./Servicios.jsx";
 import { Testimonios } from "./Testimonios.jsx";
 import { Entrevistas } from "./Entrevistas.jsx";
 import { Footer } from "./Footer.jsx";
+import { WhatsAppFloat } from "./WhatsAppFloat.jsx";
 
 export const Home = () => {
     return (
@@ -15,6 +16,7 @@ export const Home = () => {
             <Navbar />
 
             <main>
+
                 <Jumbotron />
                 <Servicios />
                 <SobreMi />
@@ -25,6 +27,8 @@ export const Home = () => {
             </main>
 
             <Footer />
+
+            <WhatsAppFloat />
 
         </div>
     );
