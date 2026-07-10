@@ -59,7 +59,7 @@ export const Navbar = () => {
                                 className={`nav-link nav-link-custom ${pathname.startsWith("/blog") ? "nav-link-blog-active" : ""}`}
                                 to="/blog"
                             >
-                                BLOG
+                                SALUD MAMARIA
                             </Link>
                         </li>
                         <li className="nav-item ms-lg-3 mt-2 mt-lg-0">
